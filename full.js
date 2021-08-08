@@ -2,6 +2,9 @@ const route = require('express').Router()
 const fs = require('./databse.js')
 const db = fs.firestore()
 
+route.get('/',(req,res)=>{
+    res.send('Working')
+})
 route.get('/:code',(req,res) =>{
     const v = req.params.code
     const base = `https://linkshortapi.herokuapp.com/` + v
